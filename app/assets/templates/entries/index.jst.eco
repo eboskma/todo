@@ -1,0 +1,7 @@
+<h1>Todo</h1>
+
+<ul>
+  <% for entry in @entries.models: %>
+    <li><%= entry.get('text') %></li>
+  <% end %>
+</ul>

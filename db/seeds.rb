@@ -1,0 +1,5 @@
+Entry.create!(text: "Get milk",                 done: false,  order: 0)
+Entry.create!(text: "Mail letter",              done: false,  order: 1)
+Entry.create!(text: "Read paper",               done: true,   order: 2)
+Entry.create!(text: "Develop awesome todo app", done: false,  order: 3)
+Entry.create!(text: "Celebrate birthday",       done: false,  order: 6)
