@@ -1,7 +1,17 @@
-<h1>Todo</h1>
-
-<ul>
-  <% for entry in @entries.models: %>
-    <li><%= entry.get('text') %></li>
-  <% end %>
-</ul>
+<div class="title">
+	<h1>Todos</h1>
+</div>
+<div class="content">
+	<form id="create-todo">
+	  <input type="text" name="name" id="new-todo" placeholder="What needs to be done?">
+	  <span class="ui-tooltip-top" style="display: none;">Press enter to save this task</span>
+	</form>
+</div>
+<div id="todos">
+	<ul id="todo-list">
+	 
+	</ul>
+</div>
+<div id="todo-stats">
+	
+</div>
