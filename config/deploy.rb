@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 server "server01.datarift.nl", :web, :app, :db, primary: true
 
 set :application, "todo"
@@ -8,8 +10,11 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, :git
-set :repository,  "git@github.com:eboskma/#{application}.git"
+set :repository,  "https://github.com/eboskma/#{application}.git"
 set :branch, "master"
+
+default_run_options[:pty] = true
+ssh_options[:forward_agent] = true
 
 namespace :deploy do
 	%w[start stop restart].each do |cmd|
