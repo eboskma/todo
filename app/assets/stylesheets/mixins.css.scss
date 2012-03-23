@@ -1,0 +1,47 @@
+/* Mixins */
+
+@mixin border-radius($radius: 4px) {
+  @include border-top-left-radius($radius);
+  @include border-top-right-radius($radius);
+  @include border-bottom-left-radius($radius);
+  @include border-bottom-right-radius($radius);
+
+}
+@mixin border-top-left-radius($radius: 4px) {
+	-moz-border-top-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -o-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+@mixin border-top-right-radius($radius: 4px) {
+	-moz-border-top-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  -o-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+@mixin border-bottom-left-radius($radius: 4px) {
+	-moz-border-bottom-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -o-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+@mixin border-bottom-right-radius($radius: 4px) {
+	-moz-border-bottom-right-radius: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+  -o-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin box-shadow ($x_offset: 0, $y_offset: 0, $blur: 0, $spread: 0, $color: rgba(0, 0, 0, 0.2), $inset: false){
+	@if not $inset {
+		-moz-box-shadow: $x_offset $y_offset $blur $spread $color;
+		-webkit-box-shadow: $x_offset $y_offset $blur $spread $color;
+		-o-box-shadow: $x_offset $y_offset $blur $spread $color;
+		box-shadow: $x_offset $y_offset $blur $spread $color;
+	} @else {
+		-moz-box-shadow: inset $x_offset $y_offset $blur $spread $color;
+		-webkit-box-shadow: inset $x_offset $y_offset $blur $spread $color;
+		-o-box-shadow: inset $x_offset $y_offset $blur $spread $color;
+		box-shadow: inset $x_offset $y_offset $blur $spread $color;
+	}
+}

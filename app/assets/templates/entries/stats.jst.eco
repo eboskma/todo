@@ -1,0 +1,8 @@
+<span class="todo-count">
+	<%= @remaining %> <%= if @remaining != 1 then "items" else "item" %> left
+</span>
+<span class="todo-clear">
+	<a href="#">
+		Clear <%= @done %> completed <%= if @done != 1 then "items" else "item" %>
+	</a>
+</span>
