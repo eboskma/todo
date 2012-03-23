@@ -121,9 +121,8 @@ body {
     text-align: center;
     vertical-align: middle;
     @include border-radius(10px);
-    border-radius: 10px;
-    line-height: 1em;
-    font-size: 21px; }
+    line-height: 15px;
+    font-size: 20px; }
   li:hover .todo-destroy {
     display: block; }
   .todo-destroy:hover {
